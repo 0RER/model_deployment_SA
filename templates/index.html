@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>sentiment analysis</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        button{
+            background-color: navy;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sentiment Analysis Prediction</h1>
+    <div>
+        <form method="post" action="/predict">
+            <textarea name="content" placeholder="Enter Your Sentiment" rows="5" cols="35">{{ email }} </textarea>
+            <div>
+                <button type="submit">Predict Sentiment</button>
+                <a href="/">Reset</a>
+            </div>
+        </form>
+    </div>
+    <div>
+        {% if prediction %}
+        <h2>{{ prediction }} {{ emoji }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
+
