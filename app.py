@@ -5,7 +5,7 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 # Load the VADER sentiment analyzer
 with open("model/vader_analyzer.pkl", 'rb') as file:
     analyzer = pickle.load(file)
-
+    
 app = Flask(__name__)
 
 def analyze_sentiment(text):
